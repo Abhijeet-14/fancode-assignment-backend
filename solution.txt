@@ -1,0 +1,15 @@
+Problem 1: /tour/matches
+    To improve Latency, following changes are donw:
+        1. added indexing in tours table on column name
+        2. add Limit & offset to get chunk of data instead of all huge data
+
+Problem 2:
+    add matchId, startTime and format to the endpoint /sport/tour/match
+
+
+Problem 3:
+    1. Created a table for news, with Foreign Key tourId & matchId. matchId can be null.
+    2. create news endpoint /news. Request Body: title, description, tourId, matchId
+    3. /match/news?matchId=1 - to fetch news by match id
+    3. /tour/news?tourId=1 - to fetch news by tour id
+    4. /sport/news?sportId=1 - to fetch news by sport id
